@@ -124,9 +124,12 @@
     </body>
 </html>
 
+<!-- Script para realizar las validaciones personalizadas -->
 <script>
     document.getElementById('leadForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+        // Prevención del evento submit por default.
+        event.preventDefault(); 
+        // Variables para obtener los elementos HTML
         var email = document.getElementById('floatingEmail');
         var emailFeedbackGood = document.getElementById('emailFeedbackGood');
         var emailFeedbackBad = document.getElementById('emailFeedbackBad');
@@ -136,9 +139,11 @@
         var phone = document.getElementById('floatingPhone');
         var phoneFeedbackGood = document.getElementById('phoneFeedbackGood');
         var phoneFeedbackBad = document.getElementById('phoneFeedbackBad');
+        // Variables para las expresiones regulares del correo y el telefono respectivamente.
         var regexmail = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
         var regexphone = /^\d{10}$/;
 
+        // Validación del campo correo electrónico a través de la expresión regular
         if (!regexmail.test(email.value)) {
             email.classList.add('is-invalid');
             email.classList.remove('is-valid');
@@ -152,6 +157,7 @@
         }
         email.classList.add('was-validated');
 
+        // Validación del campo nombre ya que es requerido.
         if (name.value === ('' || null)) {
             name.classList.add('is-invalid');
             name.classList.remove('is-valid');
@@ -165,6 +171,7 @@
         }
         name.classList.add('was-validated');
 
+        // Validación del campo teléfono a través de la expresión regular
         if (!regexphone.test(phone.value)) {
             phone.classList.add('is-invalid');
             phone.classList.remove('is-valid');
