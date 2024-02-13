@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Finanzas para Emprendedores</title> <!-- Titulo de la app -->
+        <!-- Estilos -->
+        <style>
+            .bgp {
+                background-color: #ffeae0;
+            }
+            .header {
+                background-color: #b5bbc3;
+                color: #fff;
+                text-align: center;
+                padding: 1em;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .area-form{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 60px;
+                padding-top: 60px;
+            }
+            .card {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
+                border-color: transparent !important;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .icon {
+                width: 1em;
+                height: 1em;
+                margin-right: 0.5em;
+                fill: #333;
+            }
+            .icon-title {
+                width: 1em;
+                height: 1em;
+                margin-right: 0.5em;
+                fill: #663399;
+            }
+            .icon-2 {
+                width: 1em;
+                height: 1em;
+                margin-left: 0.5em;
+                fill: #663399;
+            }
+        </style>
+        <!-- La más reciente compilación y reducción de CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="bgp">
+        <div class="container-fluid text-center header">
+            <!-- Titulo de la página -->
+            <h1>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon-title"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg>
+                Finanzas para Emprendedores
+            </h1>
+        </div>
+        
+        <div class="container">
+            <div class="area-form">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Mensaje al usuario -->
+                        <h2 class="card-title">
+                            Bienvenido a nuestra plataforma financiera
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon-2"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"/></svg>
+                        </h2>
+                        <p class="card-text">Descubre cómo podemos ayudarte a alcanzar tus metas financieras. Únete a nosotros hoy mismo.</p>
+                        <div class="container">
+                            <!-- Formulario para obtener leads incluye svg's -->
+                            <form class="needs-validation" id="leadForm">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingName" placeholder="Nombre completo"  required>
+                                    <label for="floatingName">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                                        Nombre Completo:
+                                    </label>
+                                    <!-- Mensaje de validación correcta -->
+                                    <div class="valid-feedback" id="nameFeedbackGood">Valido.</div>
+                                    <!-- Mensaje de validación incorrecta -->
+                                    <div class="invalid-feedback" id="nameFeedbackBad">Por favor llena este campo con tu nombre completo.</div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" id="floatingPhone" placeholder="5555555555" required>
+                                    <label for="floatingPhone">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                        Teléfono:
+                                    </label>
+                                    <!-- Mensaje de validación correcta -->
+                                    <div class="valid-feedback" id="phoneFeedbackGood">Valido.</div>
+                                    <!-- Mensaje de validación incorrecta -->
+                                    <div class="invalid-feedback" id="phoneFeedbackBad">Por favor llena este campo con tu número de teléfono.</div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                                    <label for="floatingEmail">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                                        Correo electrónico:
+                                    </label>
+                                    <!-- Mensaje de validación correcta -->
+                                    <div class="valid-feedback" id="emailFeedbackGood">Valido.</div>
+                                    <!-- Mensaje de validación incorrecta -->
+                                    <div class="invalid-feedback" id="emailFeedbackBad">Por favor llena este campo con una dirección de correo valida.</div>
+                                </div>
+                                <!-- Botón para enviar la informaicón -->
+                                <button type="submit" class="btn btn-dark">Unirme</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- La más reciente compilación de Javascript de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
+<!-- Script para realizar las validaciones personalizadas -->
+<script>
+    document.getElementById('leadForm').addEventListener('submit', function(event) {
+        // Prevención del evento submit por default.
+        event.preventDefault(); 
+        // Variables para obtener los elementos HTML
+        var email = document.getElementById('floatingEmail');
+        var emailFeedbackGood = document.getElementById('emailFeedbackGood');
+        var emailFeedbackBad = document.getElementById('emailFeedbackBad');
+        var name = document.getElementById('floatingName');
+        var nameFeedbackGood = document.getElementById('nameFeedbackGood');
+        var nameFeedbackBad = document.getElementById('nameFeedbackBad');
+        var phone = document.getElementById('floatingPhone');
+        var phoneFeedbackGood = document.getElementById('phoneFeedbackGood');
+        var phoneFeedbackBad = document.getElementById('phoneFeedbackBad');
+        // Variables para las expresiones regulares del correo y el telefono respectivamente.
+        var regexmail = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+        var regexphone = /^\d{10}$/;
+
+        // Validación del campo correo electrónico a través de la expresión regular
+        if (!regexmail.test(email.value)) {
+            email.classList.add('is-invalid');
+            email.classList.remove('is-valid');
+            emailFeedbackBad.style.display = 'block';
+            emailFeedbackGood.style.display = 'none';
+        } else {
+            email.classList.remove('is-invalid');
+            email.classList.add('is-valid');
+            emailFeedbackBad.style.display = 'none';
+            emailFeedbackGood.style.display = 'block';
+        }
+        email.classList.add('was-validated');
+
+        // Validación del campo nombre ya que es requerido.
+        if (name.value === ('' || null)) {
+            name.classList.add('is-invalid');
+            name.classList.remove('is-valid');
+            nameFeedbackBad.style.display = 'block';
+            nameFeedbackGood.style.display = 'none';
+        } else {
+            name.classList.remove('is-invalid');
+            name.classList.add('isvalid');
+            nameFeedbackBad.style.display = 'none';
+            nameFeedbackGood.style.display = 'block';
+        }
+        name.classList.add('was-validated');
+
+        // Validación del campo teléfono a través de la expresión regular
+        if (!regexphone.test(phone.value)) {
+            phone.classList.add('is-invalid');
+            phone.classList.remove('is-valid');
+            phoneFeedbackBadstyle.display = 'block';
+            phoneFeedbackGood.style.display = 'none';
+        } else {
+            phone.classList.remove('is-invalid');
+            phone.classList.add('is-valid');
+            phoneFeedbackBad.style.display = 'none';
+            phoneFeedbackGood.style.display = 'block';
+        }
+        phone.classList.add('was-validated');
+    });
+</script>
